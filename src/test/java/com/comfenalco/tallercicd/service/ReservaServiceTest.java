@@ -46,7 +46,7 @@ class ReservaServiceTest {
                 .thenReturn(Optional.of(new Actividad(1L, "City tour", 100_000, 20)));
 
         // 6 personas x 100.000 = 600.000, con 10% -> 540.000
-        assertEquals(540_000.0, reservaService.cotizar(1L, 6), 0.01);
+        assertEquals(500_000.0, reservaService.cotizar(1L, 6), 0.01);
         verify(actividadRepository).buscarPorId(1L);
     }
 
